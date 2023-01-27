@@ -14,6 +14,7 @@ export default function Content() {
         <>
             <div>
                 <Header />
+                
                 <div className="down">
                     <div className="down-list">
                         <ul className="list2 abc">
