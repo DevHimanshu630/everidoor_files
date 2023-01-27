@@ -1,15 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import styles from "./content.module.css"
 import food from "../Images/food.png"
 export default function Content() {
-    const handlecontent = () => {
-        document.getElementById("addcontent").addEventListener("click",function(){
-            document.querySelector(".popup").style.display="flex";
-        })
+    const [btn,setbtn]=useState(false)
+    const handlecontent=()=>{
+        setbtn(!btn);
     }
-
     return (
         <>
         
@@ -55,7 +53,7 @@ export default function Content() {
 
                     </div>
                     {/* popup coding start */}
-                    <div className={styles.popup}>
+                    <div className={styles.popup} style={{display:btn?"flex":"none"}}>
                         <div className={styles.contentcontainer}>
                             <div className={styles.mainheadingcontent}>
                                 <p className={styles.mainheadingcontent_para}>add content</p>
@@ -83,7 +81,7 @@ export default function Content() {
                             </div>
                             <div className={styles.btncontainer}>
                                 <button className={styles.addbtn} id="Addbtn">Add</button>
-                                <button className={styles.cancelbtn}>Cancel</button>
+                                <button className={styles.cancelbtn} onClick={handlecontent}>Cancel</button>
                             </div>
                         </div>
                     </div>

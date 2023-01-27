@@ -171,9 +171,12 @@ outline: none;
 
 /* popup css start */
 .popup{
-    display: none;
-    margin: auto;
-    justify-content: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1111;
+    
 }
 
 .contentcontainer{
