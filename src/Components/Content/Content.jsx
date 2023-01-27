@@ -9,12 +9,11 @@ export default function Content() {
             document.querySelector(".popup").style.display="flex";
         })
     }
-
+    
     return (
         <>
             <div>
                 <Header />
-                
                 <div className="down">
                     <div className="down-list">
                         <ul className="list2 abc">
