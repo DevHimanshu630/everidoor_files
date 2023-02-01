@@ -8,6 +8,10 @@ export default function Content() {
     const handlecontent=()=>{
         setbtn(!btn);
     }
+
+    const selectfile=()=>{
+        document.getElementById("myfile").click();
+    }
     return (
         <>
         
@@ -69,23 +73,23 @@ export default function Content() {
                             <div className={styles.bannercontent}>
                                 <p>Add images, video and audio files, websites or HTML zip archives, HLS video streaming and MP3 audio streams</p>
                             </div>
-                            <div className={styles.selectfilecontainer}>
+                            <div className={styles.selectfilecontainer}>                                          
                                 <div className={styles.parawithInputcontainer}>
                                     <p className={styles.selectfilepara}>Drag and drop your files</p>
                                     <p className={styles.selectfileor}>or</p>
                                     <div className={styles.myfile}>
-                                        <label htmlfor="myfile">Select files</label>
+                                        <label htmlfor="myfile" onClick={selectfile}>Select files</label>
                                         <input style={{ visibility: "hidden" }} type="file" id="myfile" name="myfile" multiple />
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                             <div className={styles.btncontainer}>
                                 <button className={styles.addbtn} id="Addbtn">Add</button>
                                 <button className={styles.cancelbtn} onClick={handlecontent}>Cancel</button>
                             </div>
-                        </div>
+                        </div>                                          
                     </div>
-                    {/* popup coding end */}
+                    {/* popup coding end cd */}
                     <div className={styles.productcontainer}>
                         <div className={styles.cardcontainer}>
                             <div className={styles.card}>
