@@ -1,4 +1,5 @@
 import Content from "./Components/Content/Content";
+import Dashboard from "./Components/Dashboard/Dashboard";
 import Playlist from "./Components/Playlist/Playlist";
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
     <div className="App">
       
       {/* <Playlist/>  */}
-      <Content/>
+      {/* <Content/> */}
+      <Dashboard/>
 
     </div>
   );
