@@ -5,6 +5,8 @@ import vector from "../Images/Vector.png"
 import logo from "../Images/everydoor.png"
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { Link } from 'react-router-dom'
+
 export default function Playlist() {
   return (
     <div>
@@ -14,8 +16,8 @@ export default function Playlist() {
             <div class="down">
                 <div class="down-list">
                     <ul class="list2 abc">
-                        <li>Displays</li>
-                        <li>My Content</li>
+                        <li><Link to='/' style={{textDecoration:"none" ,color:"#7E7E7E"}}>Displays</Link></li>
+                        <li><Link to='/content' style={{textDecoration:"none" ,color:"#7E7E7E"}}>My Content</Link></li>
                         <li class="display">Playlists</li>
                     </ul>
                 </div>

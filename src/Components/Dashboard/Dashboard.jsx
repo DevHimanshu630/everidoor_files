@@ -3,6 +3,7 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import styles from "./dashboard.module.css"
 import img from "../Images/img.png"
+import { Link } from 'react-router-dom'
 export default function Dashboard() {
 
     const [btn,setbtn]=useState(false)
@@ -10,8 +11,6 @@ export default function Dashboard() {
         setbtn(!btn);
     }
   return (
-    // {styles.bannerContainer}  
-    // {`${styles.btndisplay} ${styles.blue}`}
     <div>
         <main>
         <Header/>
@@ -20,8 +19,8 @@ export default function Dashboard() {
                 <div className="down-list">
                     <ul className="list2 abc">
                         <li className="display">Displays</li>
-                        <li>My Content</li>
-                        <li>Playlists</li>
+                        <li><Link to='/content' style={{textDecoration:"none" ,color:"#7E7E7E"}}>My Content</Link></li>
+                        <li><Link to='/playlist' style={{textDecoration:"none" ,color:"#7E7E7E"}}>Playlists</Link></li>
                     </ul>
                 </div>
             </div>
